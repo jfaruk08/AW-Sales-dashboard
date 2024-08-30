@@ -1,0 +1,31 @@
+--cleansed internetsales table
+SELECT
+       [ProductKey]
+      ,[OrderDateKey]
+      ,[DueDateKey]
+      ,[ShipDateKey]
+      ,[CustomerKey]
+     -- ,[PromotionKey]
+      --,[CurrencyKey]
+      ,[SalesTerritoryKey]
+      ,[SalesOrderNumber]
+      --,[SalesOrderLineNumber]
+      --,[RevisionNumber]
+      ,[OrderQuantity]
+      ,[UnitPrice]
+      --,[ExtendedAmount]
+      --,[UnitPriceDiscountPct]
+      --,[DiscountAmount]
+      --,[ProductStandardCost]
+     -- ,[TotalProductCost]
+      ,[SalesAmount]
+     -- ,[TaxAmt]
+      --,[Freight]
+      --,[CarrierTrackingNumber]
+      --,[CustomerPONumber]
+      ,cast([OrderDate] as DATE) AS OrderDate
+      --,[DueDate]
+      --	,[ShipDate]
+  FROM [AdventureWorksDW2019].[dbo].[FactInternetSales]
+  where year(OrderDate)>= YEAR(getdate())-2  -- always brings in data 2 years from when query is run
+  order by OrderDateKey
