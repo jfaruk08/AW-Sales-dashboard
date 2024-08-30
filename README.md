@@ -1,6 +1,6 @@
 # Data Analysis SQL Queries
 
-This repository contains SQL queries used to create a sales dashboard, each file representing a different query for extracting and analyzing data from the AdventureWorks database.
+This repository contains SQL queries used to create a sales dashboard, each file representing a different query for extracting and analysing data from the AdventureWorks database.
 
 ## Queries
 
